@@ -23,8 +23,8 @@ public class zipUnzip {
 				} else {
 					//to omit a few files from the destination zip directory
 					if(!file.getName().equals("fileToOmit1.pdf") && !file.getName().equals("fileToOmit1.py")){
-						//zos.putNextEntry(new ZipEntry(file.getName()));
-						//addFileToZip(file, zos);
+						zos.putNextEntry(new ZipEntry(file.getName()));
+						addFileToZip(file, zos);
 					}
 				}
 			}
